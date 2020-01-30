@@ -30,8 +30,27 @@ let lightGrey = Color(hue: 84, saturation: 6, brightness: 88, alpha: 100)
 let deepRed = Color(hue: 7, saturation: 97, brightness: 72, alpha: 100)
 
 // Begin your solution here...
+canvas.drawAxes()
 
-
+//Move the origin
+canvas.translate(to: Point(x: 100,y: 200))
+canvas.drawAxes()
+//Draw a square at the origin
+canvas.drawRectangle(at: Point(x: 0, y: 0), width: 50, height: 50)
+//Make shapes have no fill
+canvas.drawShapesWithFill = false
+//Move the origin again
+canvas.translate(to: Point(x: 100, y: 300))
+canvas.drawAxes()
+for _ in 1...6 {
+    //Draw six squares
+    //Rotate origin
+    canvas.rotate(by: 60)
+    //canvas.drawAxes()
+    canvas.drawRectangle(at: Point(x: 0, y: 0), width: 50, height: 50)
+    
+    
+}
 /*:
  ## Use Source Control
  
